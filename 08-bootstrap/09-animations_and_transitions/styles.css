@@ -1,0 +1,77 @@
+.father {
+  width: 400px;
+  height: 400px;
+  background-color: aqua;
+}
+
+.son {
+  width: 50%;
+  height: 50%;
+  background-color: rebeccapurple;
+  animation: traslation 3s ease-in-out infinite forwards alternate;
+}
+
+.father:hover .son {
+  animation-play-state: paused;
+}
+
+@keyframes traslation {
+  0% {
+    transform: translateX(0%);
+  }
+  25% {
+    transform: translateX(100%) translateY(0%);
+  }
+
+  50% {
+    transform: translateX(100%) translateY(100%);
+  }
+
+  75% {
+    transform: translateX(0%) translateY(100%);
+  }
+
+  100% {
+    transform: translateX(0%) translateY(0%);
+  }
+}
+
+body {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-modern {
+  background-color: #03ce76;
+  height: 50px;
+  border: none;
+  color: antiquewhite;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: larger;
+  cursor: pointer;
+}
+
+.btn-modern:hover {
+  animation: animationBtn 0.4s forwards;
+}
+
+@keyframes animationBtn {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-5px);
+    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+    background-color: #fd2d3d;
+    color: black;
+  }
+}
