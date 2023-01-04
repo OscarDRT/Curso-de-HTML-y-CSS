@@ -1,0 +1,41 @@
+body {
+  height: 100vh;
+  padding: 0px;
+  margin: 0px;
+}
+
+.container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.navigator {
+  display: flex;
+  flex-direction: column;
+  background-color: blue;
+  height: 100%;
+  width: 100px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.element {
+  height: 25%;
+  width: 25%;
+  background-color: red;
+}
+
+@media screen and (max-width: 640px) {
+  .container {
+    background-color: lightgreen;
+    flex-direction: column;
+  }
+  .navigator {
+    flex-direction: row;
+    height: 100px;
+    width: 100%;
+  }
+}
